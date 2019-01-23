@@ -1,0 +1,13 @@
+version: 0.0
+os: linux
+files:
+  - source: index.html
+    destination: /var/www/index.html
+hooks:
+  BeforeInstall:
+    - location: /beforeinstall.sh
+  ApplicationStart:
+    - location: /appstart.sh
+  ApplicationStop:
+    - location: /appstop.sh
+
